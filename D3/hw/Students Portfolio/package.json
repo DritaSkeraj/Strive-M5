@@ -1,0 +1,31 @@
+{
+  "name": "strive-b3-m5-d3-middlewares-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -r dotenv/config ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nclBaz/strive-b3-m5-d3-middlewares-.git"
+  },
+  "keywords": [],
+  "author": "Riccardo Gulin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nclBaz/strive-b3-m5-d3-middlewares-/issues"
+  },
+  "homepage": "https://github.com/nclBaz/strive-b3-m5-d3-middlewares-#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-list-endpoints": "^5.0.0",
+    "express-validator": "^6.8.0",
+    "uniqid": "^5.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
