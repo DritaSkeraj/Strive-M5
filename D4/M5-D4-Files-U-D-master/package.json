@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/nclBaz/strive-b3-m5-d3-middlewares-#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-list-endpoints": "^5.0.0",
     "express-validator": "^6.8.0",

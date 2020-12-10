@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "name": "Vesa",
+    "surname": "Skeraj",
+    "birthday": "01-12-2004",
+    "ID": "bdnlqhs3swkiiobj2r",
+    "modifiedAt": "2020-12-10T10:03:23.858Z"
+  },
+  {
+    "name": "drita",
+    "surname": "Skeraj",
+    "birthday": "04-07-1997",
+    "ID": "bdnlqhs60kiioc1no",
+    "modifiedAt": "2020-12-10T10:03:47.939Z"
+  }
+]

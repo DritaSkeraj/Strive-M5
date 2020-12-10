@@ -1,7 +1,7 @@
 const express = require("express")
 const path = require("path")
 const uniqid = require("uniqid")
-const { readDB, writeDB } = require("../../lib/fs-utilities")
+const { readDB, writeDB } = require("../../lib/utilities")
 
 const { check, validationResult } = require("express-validator")
 
