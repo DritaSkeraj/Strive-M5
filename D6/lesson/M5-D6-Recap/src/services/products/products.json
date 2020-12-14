@@ -1,0 +1,20 @@
+[
+  {
+    "name": "3310",
+    "brand": "Nokia",
+    "description": "Super cool",
+    "price": 1000,
+    "createdAt": "2020-12-14T09:34:51.938Z",
+    "updatedAt": "2020-12-14T09:34:51.938Z",
+    "_id": "9a3apagskiod28tf",
+    "reviews": [
+      {
+        "rate": 4,
+        "comment": "Awesome!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+        "_id": "9a3apdlgkiodisr4",
+        "createdAt": "2020-12-14T09:47:44.271Z",
+        "updatedAt": "2020-12-14T10:20:24.730Z"
+      }
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "name": "Live",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -r dotenv/config ./src/server.js"
+  },
+  "keywords": [],
+  "author": "Riccardo Gulin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-list-endpoints": "^5.0.0",
+    "express-validator": "^6.8.0",
+    "fs-extra": "^9.0.1",
+    "uniqid": "^5.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6"
+  }
+}
