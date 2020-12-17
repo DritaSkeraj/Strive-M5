@@ -1,0 +1,147 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: StriveBooks API
+  description: asdd123123123
+servers:
+  - url: http://localhost:3001
+    description: Local server
+  - url: https://hosted.on.herokuapp.com
+    description: Cloud server
+tags:
+  - name: books
+    description: Endpoints related to books
+  - name: files
+    description: Endpoints related to files
+  - name: users
+    description: Endpoints related to users    
+  - name: xml
+    description: Endpoints related to xml
+paths:
+  /books:
+    get:
+      tags:
+        - books
+      summary: Returns a list of books
+      description: Extended description of GET /books route
+      parameters:
+        - in: query
+          name: category
+          schema:
+            type: string
+          description: Filter books by category
+        - in: query
+          name: title
+          schema:
+            type: string
+          description: Filter books by title
+      responses:
+        "200":
+          description: A list of books
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Book"
+        "404":
+          description: A not found error
+    post:
+      tags:
+        - books
+      summary: Adds new books
+      description: Extendend description of POST /books route
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Book"
+      responses:
+        "200":
+          description: Ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  asin:
+                    type: string
+        '400':
+          description: Bad Request
+          content:
+            text/html:
+              schema:
+                type: string
+                example: 'Required fields missing'
+        "500":
+          description: Generic Server Error
+          content:
+            text/html:
+              schema:
+                type: string    
+                example: 'Generic Server Error'
+  /books/{asin}:
+    get:
+      tags:
+        - books
+      summary: Returns a single book
+      description: Extendend description of GET /books/:asin route
+      parameters:
+        - in: path
+          name: asin
+          schema:
+            type: string
+          description: "The name that needs to be fetched. Use user1 for testing. "
+          required: true
+      responses:
+        "200":
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Book"
+        '400':
+          description: Bad Request
+          content:
+            text/html:
+              schema:
+                type: string 
+        "404":
+          description: Not Found
+          content:
+            text/html:
+              schema:
+                type: string
+        "500":
+          description: Generic Server Error
+          content:
+            text/html:
+              schema:
+                type: string                 
+components:
+  schemas:
+    Book:
+      type: object
+      properties:
+        asin:
+          type: string
+        title:
+          type: string
+        price:
+          type: number
+        category:
+          type: string
+        img:
+          type: string
+      required:
+        - asin
+        - title
+        - price
+    User:
+      type: object
+      properties:
+        name:
+          type: string
+        img:
+          type: string
+      
