@@ -1,0 +1,27 @@
+1) Go to the website, copy the KEY / URL and save it into the .env file
+2) Install cloudinary multer-storage-cloudinary
+3) Import them in the route you want to use them:
+
+const multer = require("multer")
+const cloudinary = require("cloudinary").v2
+const { CloudinaryStorage } = require("multer-storage-cloudinary")
+
+4) Crate the cloud config
+
+const cloudStorage = new CloudinaryStorage({
+    cloudinary: cloudinary,
+    params: {
+        folder: "games"
+    }
+})
+const cloudMulter =  multer({ storage: cloudStorage})
+
+5) Use it as you are use to with multer 
+
+req.post("/whatever", cloudMulter.single("propName"), async (req, res, next))
+
+6) The URL of the newly uploaded file will be into 
+
+req.file.path
+
+7) filePicker provides you with a list of files[] -> bound the file to the state on change => use FormData to send it over
